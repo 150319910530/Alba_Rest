@@ -1,12 +1,12 @@
 package br.com.alba.entidade;
 
-import java.util.Date;
+
 
 public class Proposicao {
 	
 	private int idProposicao;
 	private String numeroProposicao;
-	private Date dateProposicao;
+	private String dateProposicao;
 	private String ementaProposicao;
 	
 	public Proposicao() {
@@ -29,11 +29,11 @@ public class Proposicao {
 		this.numeroProposicao = numeroProposicao;
 	}
 
-	public Date getDateProposicao() {
+	public String getDateProposicao() {
 		return dateProposicao;
 	}
 
-	public void setDateProposicao(Date dateProposicao) {
+	public void setDateProposicao(String dateProposicao) {
 		this.dateProposicao = dateProposicao;
 	}
 
