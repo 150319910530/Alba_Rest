@@ -24,7 +24,7 @@ public class ProposicaoService {
 		}
 		
 		@GET
-		@Path("/UltimaProposicao")
+		@Path("/UltimaProposicoes")
 		@Produces(MediaType.APPLICATION_JSON)
 		public List<Proposicao> listarNotas() {
 			List<Proposicao> listapp = null;

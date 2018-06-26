@@ -1,5 +1,7 @@
 package br.com.alba.entidade;
 
-public class ProposicaoDetalhe {
+public class ProposicaoDetalhe extends Proposicao {
+	
+	
 
 }
