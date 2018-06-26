@@ -26,7 +26,7 @@ public class ProposicaoService {
 		@GET
 		@Path("/UltimaProposicoes")
 		@Produces(MediaType.APPLICATION_JSON)
-		public List<Proposicao> listarNotas() {
+		public List<Proposicao> listarProposicao() {
 			List<Proposicao> listapp = null;
 			try {
 				listapp = proposicaoDAO.listarProposicao();

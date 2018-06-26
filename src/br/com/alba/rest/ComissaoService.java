@@ -30,7 +30,7 @@ public class ComissaoService {
 	public List<Comissao> listarNotas() {
 		List<Comissao> listacom = null;
 		try {
-			listacom = comissaoDAO.listarProposicao();
+			listacom = comissaoDAO.listarComissao();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

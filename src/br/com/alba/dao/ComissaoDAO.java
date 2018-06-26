@@ -13,7 +13,7 @@ import br.com.alba.entidade.Comissao;
 
 public class ComissaoDAO {
 	
-	public List<Comissao> listarProposicao() throws Exception {
+	public List<Comissao> listarComissao() throws Exception {
 		List<Comissao> listacom = new ArrayList<>();
 
 		Connection conexao = DbConexao.getConnection();
@@ -27,7 +27,13 @@ public class ComissaoDAO {
 
 		while (rs.next()) {
 			Comissao comissao = new Comissao();
+			//String nulo ="";
 			comissao.setIdComissao(rs.getInt("idComissao"));
+			/*if(rs.getString("idComissaoSuperior")==null) {
+				comissao.setIdComissaoSuperior(nulo);
+			}else {
+				comissao.setIdComissaoSuperior(rs.getString("idComissaoSuperior"));
+			}*/
 			comissao.setIdComissaoSuperior(rs.getString("idComissaoSuperior"));
 			comissao.setTipoComissao(rs.getString("tipoComissao"));
 			comissao.setNomeComissao(rs.getString("nomeComissao"));
