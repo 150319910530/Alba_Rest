@@ -8,7 +8,7 @@ public class DbConexao {
 	
 	public static Connection getConnection() throws SQLException, ClassNotFoundException {
 		Class.forName("com.mysql.jdbc.Driver");
-		return DriverManager.getConnection("jdbc:mysql://200.223.129.165:3306/proclegis_ba", "fecomercio", "@lb@2018");
+		return DriverManager.getConnection("jdbc:mysql://xxxxxxxxxxxxx:3306/proclegis_ba", "xxxxxxxx", "xxxxxxx");
 	}
 
 }
