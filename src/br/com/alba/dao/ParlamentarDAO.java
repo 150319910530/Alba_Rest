@@ -38,8 +38,8 @@ public class ParlamentarDAO {
 		return listapar;
 	}
 	
-	public List<Parlamentar> parlamentar(int idParlamentar) throws Exception {
-		List<Parlamentar> listaParlamentar = new ArrayList<>();
+	public Parlamentar buscarParlamentarPorId(int idParlamentar) throws Exception {
+		Parlamentar parlamentar = new Parlamentar();;
 
 		Connection conexao = DbConexao.getConnection();
 
@@ -52,17 +52,17 @@ public class ParlamentarDAO {
 		ResultSet rs = statement.executeQuery();
 
 		while (rs.next()) {
-			Parlamentar parlamentar = new Parlamentar();
+			
 			parlamentar.setIdParlamentar(rs.getInt("idParlamentar"));
 			parlamentar.setNomeParlamentar(rs.getString("nomeParlamentar"));
 			parlamentar.setSiglaPartido(rs.getString("siglaPartido"));
 			parlamentar.setSexo(rs.getString("sexo"));
 			parlamentar.setAtivo(rs.getString("ativo"));
 
-			listaParlamentar.add(parlamentar);
+			
 		}
 
-		return listaParlamentar;
+		return parlamentar;
 	}
 
 }
